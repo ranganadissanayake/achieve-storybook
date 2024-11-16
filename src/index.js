@@ -1,14 +1,10 @@
 // src/index.js
 
-import * as styles from './shared/styles';
-import * as global from './shared/global';
-import * as animation from './shared/animation';
-import * as icons from './shared/icons';
+import * as styles from './stories/styles';
+import * as global from './stories/global';
+import * as animation from './stories/animation';
+import * as icons from './stories/icons';
 
 export { styles, global, animation, icons };
 
-export * from './Avatar';
-export * from './Badge';
-export * from './Button';
-export * from './Icon';
-export * from './Link';
+export * from './stories/button.component';
