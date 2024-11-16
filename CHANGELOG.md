@@ -1,10 +1,8 @@
-# v1.0.2 (Sat Nov 16 2024)
 
-#### ⚠️ Pushed to `main`
+# v0.1.0 (Mon Jun 12 2023)
 
-- change (Visiontec@123)
-- initial commit (Visiontec@123)
+- Created first version of the design system, with `Avatar`, `Badge`, `Button`, `Icon` and `Link` components.
 
 #### Authors: 1
 
-- ranganadissa@gmail.com (Visiontec@123)
+- [your-username](https://github.com/your-username)
