@@ -90,7 +90,7 @@
         {
             "name": "ButtonComponent",
             "id": "component-ButtonComponent-5747b2121bdc472b32e41e4e47db44dbd7601fe73e9c7b3d0f82e7d1aaf97be0d13d4880fee19b0e4d511178aa52a24a5a9ea3ee0034d204ffd659c0aae43e41",
-            "file": "src/stories/button.component.ts",
+            "file": "src/stories/atoms/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -223,7 +223,7 @@
         },
         {
             "name": "HeaderComponent",
-            "id": "component-HeaderComponent-35575735b3444c6f049822f5234963ce3b046795ea9cdf6a15e8c7d72acd8ededb78ca25c4e1fbb5f0416c5855203a87ae0483f5d065c2dfa68d5329e347a84b",
+            "id": "component-HeaderComponent-fbd3166e74bd5d925e9ed7392f8dbaa86b3a03bdf70ec184a40238e37de1a92efa46f59e7d29d4d270386ed50f98205b73a1bd39f1f04d97288c7ed89195ed87",
             "file": "src/stories/header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -296,7 +296,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\nimport { ButtonComponent } from './button.component';\r\nimport type { User } from './user';\r\n\r\n@Component({\r\n  selector: 'storybook-header',\r\n  standalone: true,\r\n  imports: [CommonModule, ButtonComponent],\r\n  template: `<header>\r\n  <div class=\"storybook-header\">\r\n    <div>\r\n      <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\r\n        <g fill=\"none\" fillRule=\"evenodd\">\r\n          <path\r\n            d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\r\n            fill=\"#FFF\"\r\n          />\r\n          <path\r\n            d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\r\n            fill=\"#555AB9\"\r\n          />\r\n          <path d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\" fill=\"#91BAF8\" />\r\n        </g>\r\n      </svg>\r\n      <h1>Acme</h1>\r\n    </div>\r\n    <div>\r\n      <div *ngIf=\"user\">\r\n        <span class=\"welcome\">\r\n          Welcome, <b>{{ user.name }}</b\r\n          >!\r\n        </span>\r\n        <storybook-button\r\n          *ngIf=\"user\"\r\n          size=\"small\"\r\n          (onClick)=\"onLogout.emit($event)\"\r\n          label=\"Log out\"\r\n        ></storybook-button>\r\n      </div>\r\n      <div *ngIf=\"!user\">\r\n        <storybook-button\r\n          *ngIf=\"!user\"\r\n          size=\"small\"\r\n          class=\"margin-left\"\r\n          (onClick)=\"onLogin.emit($event)\"\r\n          label=\"Log in\"\r\n        ></storybook-button>\r\n        <storybook-button\r\n          *ngIf=\"!user\"\r\n          size=\"small\"\r\n          [primary]=\"true\"\r\n          class=\"margin-left\"\r\n          (onClick)=\"onCreateAccount.emit($event)\"\r\n          label=\"Sign up\"\r\n        ></storybook-button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>`,\r\n  styleUrls: ['./header.css'],\r\n})\r\nexport class HeaderComponent {\r\n  @Input()\r\n  user: User | null = null;\r\n\r\n  @Output()\r\n  onLogin = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onLogout = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onCreateAccount = new EventEmitter<Event>();\r\n}\r\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\nimport { ButtonComponent } from './atoms/button/button.component';\r\nimport type { User } from './user';\r\n\r\n@Component({\r\n  selector: 'storybook-header',\r\n  standalone: true,\r\n  imports: [CommonModule, ButtonComponent],\r\n  template: `<header>\r\n  <div class=\"storybook-header\">\r\n    <div>\r\n      <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\r\n        <g fill=\"none\" fillRule=\"evenodd\">\r\n          <path\r\n            d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\r\n            fill=\"#FFF\"\r\n          />\r\n          <path\r\n            d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\r\n            fill=\"#555AB9\"\r\n          />\r\n          <path d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\" fill=\"#91BAF8\" />\r\n        </g>\r\n      </svg>\r\n      <h1>Acme</h1>\r\n    </div>\r\n    <div>\r\n      <div *ngIf=\"user\">\r\n        <span class=\"welcome\">\r\n          Welcome, <b>{{ user.name }}</b\r\n          >!\r\n        </span>\r\n        <storybook-button\r\n          *ngIf=\"user\"\r\n          size=\"small\"\r\n          (onClick)=\"onLogout.emit($event)\"\r\n          label=\"Log out\"\r\n        ></storybook-button>\r\n      </div>\r\n      <div *ngIf=\"!user\">\r\n        <storybook-button\r\n          *ngIf=\"!user\"\r\n          size=\"small\"\r\n          class=\"margin-left\"\r\n          (onClick)=\"onLogin.emit($event)\"\r\n          label=\"Log in\"\r\n        ></storybook-button>\r\n        <storybook-button\r\n          *ngIf=\"!user\"\r\n          size=\"small\"\r\n          [primary]=\"true\"\r\n          class=\"margin-left\"\r\n          (onClick)=\"onCreateAccount.emit($event)\"\r\n          label=\"Sign up\"\r\n        ></storybook-button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</header>`,\r\n  styleUrls: ['./header.css'],\r\n})\r\nexport class HeaderComponent {\r\n  @Input()\r\n  user: User | null = null;\r\n\r\n  @Output()\r\n  onLogin = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onLogout = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onCreateAccount = new EventEmitter<Event>();\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -462,7 +462,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/button.component.ts",
+                "filePath": "src/stories/atoms/button/button.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonComponent",
