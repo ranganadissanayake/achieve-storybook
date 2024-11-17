@@ -1,10 +1,9 @@
 // src/index.js
-
+import './stories/global';
 import * as styles from './stories/styles';
 import * as global from './stories/global';
-import * as animation from './stories/animation';
-import * as icons from './stories/icons';
 
-export { styles, global, animation, icons };
+export { styles, global };
 
 export * from './stories/button.component';
+import './stories/styles';  // Make sure the path is correct

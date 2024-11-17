@@ -2,15 +2,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "paths": {
-      "achive-angular-lib": [
-        "./dist/achive-angular-lib"
-      ],
-      "my-test-lib": [
-        "./dist/my-test-lib"
-      ]
-    },
-    "outDir": "./dist/my-test-lib",
+    "typeRoots": ["node_modules/@types", "node_modules"],
+    "types": ["node"],
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -19,8 +12,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "sourceMap": true,
-	"declaration": true,
-    "declarationDir": "./dist/my-test-lib/types",
+	  "declaration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
@@ -33,7 +25,7 @@
     ]
   },
   "include": [
-    "src/**/*"
+    "src/**/*.ts"
   ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
