@@ -1,0 +1,27 @@
+{
+    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+    "dest": "dist",
+    "lib": {
+      "entryFile": "src/public-api.ts",
+      "styleIncludePaths": ["./src/styles"]
+    },
+    "assets": [
+      "./src/styles/**/*.scss",
+      "./src/assets/**/*"
+    ],
+
+  "allowedNonPeerDependencies": [
+    "@angular/animations",
+    "@angular/common",
+    "@angular/compiler",
+    "@angular/core",
+    "@angular/forms",
+    "@rollup/plugin-terser",
+    "@angular/platform-browser",
+    "@angular/platform-browser-dynamic",
+    "@angular/router",
+    "ng-zorro-antd",
+    "rxjs",
+    "zone.js"
+  ]
+}

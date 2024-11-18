@@ -1,20 +1,20 @@
 {
   "name": "@ranganadissa/ng-storybook-achieve",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "type": "module",
   "description": "Storybook design systems tutorial",
   "license": "MIT",
   "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "module": "./dist/fesm2022/ranganadissa-ng-storybook-achieve.mjs",
+  "typings": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "esm2022": "./dist/index.js",
-      "esm": "./dist/index.js",
-      "default": "./dist/index.js"
+      "esm2022": "./dist/fesm2022/ranganadissa-ng-storybook-achieve.mjs",
+      "esm": "./dist/fesm2022/ranganadissa-ng-storybook-achieve.mjs",
+      "default": "./dist/fesm2022/ranganadissa-ng-storybook-achieve.mjs"
     }
-    },
+  },
   "repository": "https://github.com/ranganadissanayake/achieve-storybook.git",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -26,12 +26,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-     "build": "rollup -c && tsc --emitDeclarationOnly",
-    "build:watch": "rollup -c -w",
-    "watch": "ng build --watch --configuration development",
+    "build": "ng-packagr -p ng-package.json",
+    "build:watch": "ng-packagr -p ng-package.json --watch",
+    "build-storybook": "ng run storybook:build-storybook",
     "test": "ng test",
     "storybook": "ng run storybook:storybook",
-    "build-storybook": "ng run storybook:build-storybook",
     "publish-storybook": "npm publish",
     "chromatic": "npx chromatic --project-token=chpt_79fc6d072a81ddf"
   },
