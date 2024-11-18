@@ -1,6 +1,6 @@
 {
   "name": "@ranganadissa/ng-storybook-achieve",
-  "version": "0.1.8",
+  "version": "0.1.11",
   "type": "module",
   "description": "Storybook design systems tutorial",
   "license": "MIT",
@@ -13,6 +13,7 @@
       "esm2022": "./dist/index.js",
       "esm": "./dist/index.js",
       "default": "./dist/index.js"
+    }
     },
   "repository": "https://github.com/ranganadissanayake/achieve-storybook.git",
   "publishConfig": {
@@ -25,7 +26,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+     "build": "rollup -c && tsc --emitDeclarationOnly",
+    "build:watch": "rollup -c -w",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "storybook": "ng run storybook:storybook",
@@ -90,5 +92,4 @@
     "typescript": "~5.4.2"
   },
   "author": "ranganadissa"
-}
 }
