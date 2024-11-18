@@ -1,0 +1,76 @@
+@use '../../../theme/mixins' as mixins;
+@use '../../../assets/fonts/fonts';
+
+.label-container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'BT Curve';
+    font-weight: 400;
+    font-style: normal;
+    @include mixins.generate-spacing(gap, 1);
+
+    .label {
+        @include mixins.generate-spacing(font-size, 6);
+        @include mixins.generate-spacing(line-height, 7);
+        @include mixins.themer() {
+            color: mixins.theme-value('text');
+        }
+    }
+
+    .label-medium {
+        @include mixins.generate-spacing(font-size, 5);
+        @include mixins.generate-spacing(line-height, 7);
+    }
+
+    .label-small {
+        font-size: 14px;
+        @include mixins.generate-spacing(line-height, 6);
+    }
+
+    .label-x-small {
+        @include mixins.generate-spacing(font-size, 4);
+        @include mixins.generate-spacing(line-height, 5);
+    }
+
+    .optional {
+        font-size: 14px;
+        line-height: 18px;
+        @include mixins.generate-spacing(padding-left, 2);
+        @include mixins.themer() {
+            color: mixins.theme-value('text-secondary');
+        }
+    }
+
+    .optional-small {
+        @include mixins.generate-spacing(font-size, 4);
+        @include mixins.generate-spacing(line-height, 5);
+    }
+
+    .helper {
+        @include mixins.generate-spacing(font-size, 5);
+        @include mixins.generate-spacing(line-height, 6);
+        @include mixins.themer() {
+            color: mixins.theme-value('text-secondary');
+        }
+    }
+
+    .helper-small {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .helper-x-small {
+        @include mixins.generate-spacing(font-size, 4);
+        @include mixins.generate-spacing(line-height, 5);
+    }
+
+    .font-headline {
+        font-family: 'BT Curve Headline';
+        font-weight: 500;
+    }
+
+    .font-curve {
+        font-family: 'BT Curve';
+        font-weight: 400;
+    }
+}

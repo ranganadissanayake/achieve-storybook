@@ -16,7 +16,7 @@ const packageJson = requireFile('./package.json');
 
 export default [
   {
-    input: 'src/index.js',
+    input: 'src/main.ts',
     output: {
       file: 'dist/bundle.js',  // Output file
       format: 'esm',  // Output format (e.g., 'esm', 'cjs')
@@ -25,13 +25,13 @@ export default [
     plugins: [
       peerDepsExternal(),
       resolve({
-        extensions: ['.js', '.ts', '.tsx'],
+        extensions: ['.js', '.ts', '.tsx', '.html'],
       }),
       commonjs(),
       terser(),
       typescript(),
       babel({
-        extensions: ['.js', '.ts', '.tsx'],
+        extensions: ['.js', '.ts', '.tsx', '.html'],
         exclude: 'node_modules/**',
         plugins: [
           ['@babel/plugin-proposal-decorators', { legacy: true }],  // Enable decorators support

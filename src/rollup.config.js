@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
 import { terser } from 'rollup-plugin-terser';
+import json from '@rollup/plugin-json';
 import path from 'path';
 
 // Define entry points for Storybook files and components
@@ -26,11 +27,17 @@ export default {
     peerDepsExternal(),         // Exclude peer dependencies from the bundle
     resolve(),                  // Resolve node modules
     commonjs(),                 // Convert CommonJS to ES6
-    typescript(),               // Process TypeScript files
+    typescript(), 
+    json(),              // Process TypeScript files
     terser(),                   // Minify the output
     typescript({
       tsconfig: './tsconfig.json',  // Ensure the tsconfig is correctly referenced
     }),
   ],
-  external: ['@storybook/angular'],  // Exclude Storybook itself from the bundle
+  external: [
+    '@angular/core', 
+    '@angular/common', 
+    'rxjs', 
+    'storybook-angular',  // External dependencies (do not bundle these)
+  ],
 };

@@ -1,1 +1,3 @@
-export * from './atoms/button/button.component';
+export * from './atoms';
+export * from './molecules';
+export * from './organisms';

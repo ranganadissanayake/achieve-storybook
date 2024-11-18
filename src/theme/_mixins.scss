@@ -1,0 +1,50 @@
+@use "theme";
+
+@mixin themer() {
+    @each $theme, $map in theme.$themes {
+        .theme--#{$theme} & {
+            $theme-map: () !global;
+            @each $key, $submap in $map {
+                $value: map-get(map-get(theme.$themes, $theme), '#{$key}');
+                $theme-map: map-merge(
+                    $theme-map,
+                    (
+                        $key: $value
+                    )
+                ) !global;
+            }
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+
+@function theme-value($key) {
+    @return map-get($theme-map, $key);
+}
+
+//using the preset size values in theme, you can select the value of spacing needed
+@mixin generate-spacing($property, $number) {
+    $value-type: 1rem;
+    $size: nth(theme.$sizes, $number);
+    #{$property}: $value-type * $size;
+}
+
+@mixin generate-negative-spacing($property, $number) {
+    $value-type: -1rem;
+    $size: nth(theme.$sizes, $number);
+    #{$property}: $value-type * $size;
+}
+
+@mixin border-radius($size: default) {
+    border-radius: map-get(theme.$radius, $size) * 1px;
+}
+
+@mixin border-weight($size) {
+    border-width: map-get(theme.$border-weight, $size) * 1px;
+}
+
+@mixin generate-spacing-px($property, $value) {
+    $finalValue: $value * 1px;
+    #{$property}: $finalValue;
+  }

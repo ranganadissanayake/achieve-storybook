@@ -1,21 +1,26 @@
 {
   "name": "@ranganadissa/ng-storybook-achieve",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "type": "module",
   "description": "Storybook design systems tutorial",
   "license": "MIT",
-  "main": "dist/bundle.js",
-  "types": "dist/main.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./dist/bundle.js"
-  },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "esm2022": "./dist/index.js",
+      "esm": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
   "repository": "https://github.com/ranganadissanayake/achieve-storybook.git",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "files": [
-    "src",
-    "storybook-static"
+ "files": [
+    "dist",
+    "src"
   ],
   "scripts": {
     "ng": "ng",
@@ -39,6 +44,7 @@
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
     "@rollup/plugin-terser": "^0.4.4",
+    "ng-zorro-antd": "^17.4.1",
     "rxjs": "~7.8.0",
     "zone.js": "~0.14.3"
   },
@@ -84,4 +90,5 @@
     "typescript": "~5.4.2"
   },
   "author": "ranganadissa"
+}
 }

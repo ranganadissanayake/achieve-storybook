@@ -1,0 +1,80 @@
+:root {
+    //Brand colors
+    --light-primary: #5514b4;
+    --dark-primary: #ff80ff;
+
+    --brand-black: #2a2a2a;
+    --brand-white: #ffffff;
+
+    //gradients
+    --light-gradient: linear-gradient(90deg, #5514b4 50%, #7e2ec6 100%);
+    --dark-gradient: linear-gradient(90deg, #ff80ff 50%, #d666ed 100%);
+    --gradient-100: linear-gradient(90deg, #fcf9ff 0%, #f9f9ff 100%);
+
+    //status BRAG
+    --status-info: #0066ff;
+    --status-critical: #da020f;
+    --status-warning: #ffa200;
+    --status-success: #088003;
+
+    //light status
+    --success-light: #9ED296;
+    --warning-light: #fef0c7;
+    --critical-light: #fa9590;
+    --info-light: #9BBCF9;
+
+    //lighter status
+    --success-lighter: #E6F4E5;
+    --warning-lighter: #fffaeb;
+    --critical-lighter: #ffe9ec;
+    --info-lighter: #E2EAFC;
+
+    //alternateive status
+    --success-alt: #039855;
+    --warning-alt: #dc6803;
+    --critical-alt: #d92d20;
+
+    //tint
+    --light-tint: #f6f0f8;
+    --dark-tint: #481639;
+    --darker-tint: #2a1c4a;
+    --focus-tint: #8449cc;
+    --error-tint: #ffe9ec;
+    --progress-tint: #f8efff;
+    --tint-100: #f6f0f8;
+
+    //grays
+    --gray-dark: #434343;
+    --gray-light: #e3e3e3;
+    --gray-100: #f0f0f0;
+    --gray-200: #d9d9d9;
+    --gray-300: #c8c8c8;
+    --gray-400: #6b6b6b;
+    --gray-500: #2a1c4a1f;
+    --gray-600: #2a1c4a33;
+
+    //reds
+    --red-muted: #ffe9ec;
+    --red-light: #fa9590;
+    --red-critical: #da020f;
+
+    //greens
+    --green-muted: #e6f4e5;
+
+    //interaction colors
+    --rurikon-blue: #172B4D;
+
+    //highlight/hover colors
+    --light-highlight: #3f187f;
+    --dark-highlight: #ffb7fe;
+    --lighter-background-highlight: #fcf8ff;
+
+    //active
+    --light-active: #2a1c4a;
+    --dark-active: #ffe4ff;
+
+    //background colors
+    --lighter-background: #f7f7f7;
+    --butter-fingers: #FCEAAC;
+    --seashell-peach: #FEF6DE;
+}
